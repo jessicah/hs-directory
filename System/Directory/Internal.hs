@@ -16,6 +16,8 @@ module System.Directory.Internal
 
 #if defined(mingw32_HOST_OS)
   , module System.Directory.Internal.Windows
+#elif defined(haiku_HOST_OS)
+  , module System.Directory.Internal.Haiku
 #else
   , module System.Directory.Internal.Posix
 #endif
